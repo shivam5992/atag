@@ -29,6 +29,9 @@ def automate_tagging(bname = None, tagname = None, tagmessage = None):
 	command = "git rev-parse tags/" + tagname + "^{commit}"
 	execute(command, "Validating the tag")
 
+	command = "git push https://github.com/shivam5992/atag.git --tag" 
+	execute(command, "Pushing the tag")
+
 args = sys.argv
 bname = args[1]
 tname = args[2]
